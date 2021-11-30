@@ -1,0 +1,13 @@
+<h3>今日という一日</h3>
+
+<div class="form-group">
+  <%= form_with model:post, local:true do |f| %>
+    <p>良かった点</p>
+    <%= f.text_area :title, col:30, rows:5, class: "form-control" %><br>
+    <p>反省すべき点</p>
+    <%= f.text_area :body, cols:30, rows:5, class: "form-control" %><br>
+    <p>今日の写真</p>
+    <%= f.attachment_field :image %><br>
+    <%= f.submit '投稿', class: "btn btn-outline-success btn-lg" %>
+  <% end %>
+</div>

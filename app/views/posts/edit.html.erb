@@ -1,0 +1,18 @@
+<div class="container mt-5">
+ <div class="row">
+  <div class="col-lg-5 mx-auto">
+   <h3>編集画面</h3>
+   
+   <div class="form-group">
+   <%= form_with model:@post, local:true do |f| %>
+    <p>良かった点</p>
+    <%= f.text_area :title, class: "form-control" %>
+    <p>反省すべき点</p>
+    <%= f.text_area :body, class: "form-control" %>
+    <%= f.submit '更新', class: "btn btn-outline-success btn-lg" %>
+   <% end %>
+   </div>
+
+  </div>
+ </div>
+</div>
